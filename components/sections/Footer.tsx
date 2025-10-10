@@ -1,0 +1,133 @@
+import { Heart, Mail, Phone, MapPin, Brain } from "lucide-react";
+
+export function Footer() {
+  return (
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">MerimnaCare</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. 
+              Συνδέουμε οικογένειες με επαληθευμένους φροντιστές με αξιοπρέπεια, ασφάλεια και καινοτομία.
+            </p>
+            
+            {/* Alzheimer Research Notice */}
+            <div className="bg-blue-900/50 border border-blue-700 rounded-lg p-4 mb-6">
+              <div className="flex items-center gap-3 mb-2">
+                <Brain className="h-5 w-5 text-blue-400" />
+                <h4 className="font-semibold text-blue-200">Υποστήριξη Έρευνας Alzheimer</h4>
+              </div>
+              <p className="text-sm text-blue-100">
+                Το 5% των εσόδων μας διατίθεται για την υποστήριξη έρευνας στη νόσο Alzheimer 
+                και άλλες μορφές άνοιας, συμβάλλοντας στην εύρεση καλύτερων θεραπειών για το μέλλον.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm text-gray-400">
+              <Heart className="h-4 w-4 text-red-500" />
+              <span>Φτιαγμένο με αγάπη για τις ελληνικές οικογένειες</span>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Γρήγοροι Σύνδεσμοι</h4>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <a href="#about" className="hover:text-white transition-colors">
+                  Ποιοι Είμαστε
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-white transition-colors">
+                  Υπηρεσίες
+                </a>
+              </li>
+              <li>
+                <a href="#demo" className="hover:text-white transition-colors">
+                  Demo
+                </a>
+              </li>
+              <li>
+                <a href="#waitlist" className="hover:text-white transition-colors">
+                  Εγγραφή
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Πολιτική Απορρήτου
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-white transition-colors">
+                  Όροι Χρήσης
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-semibold mb-4">Επικοινωνία</h4>
+            <div className="space-y-3 text-gray-300">
+              <div className="flex items-center gap-3">
+                <Mail className="h-4 w-4" />
+                <a href="mailto:info@merimnacare.gr" className="hover:text-white transition-colors">
+                  info@merimnacare.gr
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+306955117140" className="hover:text-white transition-colors">
+                  +30 6955 117 140
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 mt-1" />
+                <div>
+                  <p>Αθήνα, Ελλάδα</p>
+                  <p className="text-sm text-gray-400">
+                    Σύντομα σε Θεσσαλονίκη και Κρήτη
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Founder Info */}
+            <div className="mt-6 pt-6 border-t border-gray-700">
+              <p className="text-sm text-gray-400">
+                Ιδρυτής: <span className="text-white">Φώτιος Κουζιώρτης</span>
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Εμπνευσμένο από την προσωπική εμπειρία φροντίδας παππούδων
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Service Areas */}
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <h4 className="font-semibold mb-4 text-center">Περιοχές Εξυπηρέτησης</h4>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
+            <span className="bg-gray-800 px-3 py-1 rounded-full">Αθήνα</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full">Θεσσαλονίκη (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full">Κρήτη (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full">Πάτρα (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full">Λάρισα (Σύντομα)</span>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+          <p className="text-sm">
+            © 2024 MerimnaCare. Όλα τα δικαιώματα κατοχυρωμένα. 
+            Φροντίδα με αξιοπρέπεια για κάθε ελληνική οικογένεια.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
