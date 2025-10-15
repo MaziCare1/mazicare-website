@@ -190,3 +190,13 @@ html {
   font-size: var(--font-size);
 }
 
+/* Prevent browser translation from interfering with interactive components */
+.notranslate {
+  translate: no;
+}
+
+/* Protect form elements and interactive components from translation DOM manipulation */
+select, option, [role="combobox"], [role="option"], [role="listbox"] {
+  translate: no;
+}
+
