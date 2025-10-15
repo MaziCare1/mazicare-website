@@ -36,7 +36,7 @@ export function CaregiverMatchDemo() {
       name: "Μαρία Παπαδοπούλου",
       experience: "8 χρόνια εμπειρίας",
       rating: 4.9,
-      location: "Αθήνα, Κέντρο",
+      location: "Αθήνα",
       availability: "Δευτέρα-Παρασκευή, 08:00-16:00",
       specialties: ["Άνοια", "Φυσικοθεραπεία", "Διαβήτης"],
       price: "15€/ώρα",
@@ -47,7 +47,7 @@ export function CaregiverMatchDemo() {
       name: "Ελένη Γεωργίου",
       experience: "12 χρόνια εμπειρίας",
       rating: 4.8,
-      location: "Αθήνα, Κέντρο",
+      location: "Αθήνα",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Καρδιολογικά", "Συναισθηματική Υποστήριξη"],
       price: "18€/ώρα",
@@ -58,7 +58,7 @@ export function CaregiverMatchDemo() {
       name: "Ιωάννα Νικολάου",
       experience: "5 χρόνια εμπειρίας",
       rating: 4.7,
-      location: "Αθήνα, Κέντρο",
+      location: "Αθήνα",
       availability: "Σαββατοκύριακα, 09:00-17:00",
       specialties: ["Κινητικότητα", "Μαγείρεμα", "Καθαριότητα"],
       price: "12€/ώρα",
@@ -104,7 +104,7 @@ export function CaregiverMatchDemo() {
     return allCaregivers.filter((caregiver) => {
       // Filter by area
       const areaMatch = 
-        (formData.area === "athens-center" && caregiver.location.includes("Αθήνα, Κέντρο")) ||
+        (formData.area === "athens-center" && caregiver.location.includes("Αθήνα")) ||
         (formData.area === "thessaloniki" && caregiver.location.includes("Θεσσαλονίκη")) ||
         (formData.area === "crete" && caregiver.location.includes("Κρήτη"));
 
@@ -207,7 +207,7 @@ export function CaregiverMatchDemo() {
                       <SelectValue placeholder="Επιλέξτε περιοχή" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="athens-center">Αθήνα, Κέντρο</SelectItem>
+                      <SelectItem value="athens-center">Αθήνα</SelectItem>
                       <SelectItem value="thessaloniki">Θεσσαλονίκη</SelectItem>
                       <SelectItem value="crete">Κρήτη</SelectItem>
                     </SelectContent>
