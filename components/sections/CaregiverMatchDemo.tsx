@@ -29,7 +29,8 @@ export function CaregiverMatchDemo() {
   });
   const [showResults, setShowResults] = useState(true);
 
-  const mockCaregivers: CaregiverProfile[] = [
+  // All available caregivers database
+  const allCaregivers: CaregiverProfile[] = [
     {
       id: "1",
       name: "Μαρία Παπαδοπούλου",
@@ -46,7 +47,7 @@ export function CaregiverMatchDemo() {
       name: "Ελένη Γεωργίου",
       experience: "12 χρόνια εμπειρίας",
       rating: 4.8,
-      location: "Αθήνα, Βόρεια Προάστια",
+      location: "Αθήνα, Κέντρο",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Καρδιολογικά", "Συναισθηματική Υποστήριξη"],
       price: "18€/ώρα",
@@ -57,13 +58,96 @@ export function CaregiverMatchDemo() {
       name: "Ιωάννα Νικολάου",
       experience: "5 χρόνια εμπειρίας",
       rating: 4.7,
-      location: "Αθήνα, Νότια Προάστια",
+      location: "Αθήνα, Κέντρο",
       availability: "Σαββατοκύριακα, 09:00-17:00",
       specialties: ["Κινητικότητα", "Μαγείρεμα", "Καθαριότητα"],
       price: "12€/ώρα",
       verified: true,
     },
+    {
+      id: "4",
+      name: "Δημήτρης Αντωνίου",
+      experience: "10 χρόνια εμπειρίας",
+      rating: 4.8,
+      location: "Θεσσαλονίκη",
+      availability: "Δευτέρα-Παρασκευή, 09:00-17:00",
+      specialties: ["Φυσικοθεραπεία", "Αποκατάσταση", "Κινητικότητα"],
+      price: "16€/ώρα",
+      verified: true,
+    },
+    {
+      id: "5",
+      name: "Σοφία Παπαδάκη",
+      experience: "6 χρόνια εμπειρίας",
+      rating: 4.9,
+      location: "Κρήτη",
+      availability: "Καθημερινά, 24/7",
+      specialties: ["Βασική φροντίδα", "Μαγείρεμα", "Συντροφιά"],
+      price: "14€/ώρα",
+      verified: true,
+    },
+    {
+      id: "6",
+      name: "Γεώργιος Μακρής",
+      experience: "15 χρόνια εμπειρίας",
+      rating: 5.0,
+      location: "Θεσσαλονίκη",
+      availability: "Δευτέρα-Παρασκευή, 08:00-20:00",
+      specialties: ["Άνοια", "Αλτσχάιμερ", "Ειδικές ανάγκες"],
+      price: "20€/ώρα",
+      verified: true,
+    },
   ];
+
+  // Filter caregivers based on selections
+  const getFilteredCaregivers = () => {
+    return allCaregivers.filter((caregiver) => {
+      // Filter by area
+      const areaMatch = 
+        (formData.area === "athens-center" && caregiver.location.includes("Αθήνα, Κέντρο")) ||
+        (formData.area === "thessaloniki" && caregiver.location.includes("Θεσσαλονίκη")) ||
+        (formData.area === "crete" && caregiver.location.includes("Κρήτη"));
+
+      if (!areaMatch) return false;
+
+      // Filter by care type
+      if (formData.careType === "medical") {
+        const medicalSpecialties = ["Φυσικοθεραπεία", "Διαβήτης", "Καρδιολογικά", "Άνοια", "Αλτσχάιμερ"];
+        if (!caregiver.specialties.some(s => medicalSpecialties.includes(s))) return false;
+      } else if (formData.careType === "basic") {
+        const basicSpecialties = ["Βασική φροντίδα", "Μαγείρεμα", "Καθαριότητα", "Κινητικότητα"];
+        if (!caregiver.specialties.some(s => basicSpecialties.includes(s))) return false;
+      } else if (formData.careType === "specialized") {
+        const specializedSpecialties = ["Άνοια", "Αλτσχάιμερ", "Ειδικές ανάγκες"];
+        if (!caregiver.specialties.some(s => specializedSpecialties.includes(s))) return false;
+      } else if (formData.careType === "companionship") {
+        const companionshipSpecialties = ["Συντροφιά", "Συναισθηματική Υποστήριξη"];
+        if (!caregiver.specialties.some(s => companionshipSpecialties.includes(s))) return false;
+      }
+
+      // Filter by gender (in this demo, we'll use name patterns as proxy)
+      if (formData.gender === "female") {
+        const femaleNames = ["Μαρία", "Ελένη", "Ιωάννα", "Σοφία"];
+        if (!femaleNames.some(name => caregiver.name.includes(name))) return false;
+      } else if (formData.gender === "male") {
+        const maleNames = ["Δημήτρης", "Γεώργιος"];
+        if (!maleNames.some(name => caregiver.name.includes(name))) return false;
+      }
+
+      // Filter by schedule
+      if (formData.schedule === "weekdays") {
+        if (!caregiver.availability.includes("Δευτέρα-Παρασκευή")) return false;
+      } else if (formData.schedule === "weekends") {
+        if (!caregiver.availability.includes("Σαββατοκύριακα")) return false;
+      } else if (formData.schedule === "24-7") {
+        if (!caregiver.availability.includes("24/7")) return false;
+      }
+
+      return true;
+    });
+  };
+
+  const filteredCaregivers = getFilteredCaregivers();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,7 +169,7 @@ export function CaregiverMatchDemo() {
             Βρείτε τον Κατάλληλο Φροντιστή — Δοκιμάστε το Demo
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Απαντήστε σε μερικές σύντομες ερωτήσεις και δείτε πώς η MerimnaCare σας προτείνει 
+            Απαντήστε σε μερικές σύντομες ερωτήσεις και δείτε πώς η MaziCare σας προτείνει 
             τον κατάλληλο φροντιστή με βάση τις ανάγκες, την τοποθεσία και τις προτιμήσεις σας.
           </p>
         </div>
@@ -185,8 +269,11 @@ export function CaregiverMatchDemo() {
           <div>
             {showResults ? (
               <div className="space-y-6">
-                <h3 className="text-xl font-semibold">Προτεινόμενοι Φροντιστές</h3>
-                {mockCaregivers.map((caregiver) => (
+                <h3 className="text-xl font-semibold">
+                  Προτεινόμενοι Φροντιστές ({filteredCaregivers.length})
+                </h3>
+                {filteredCaregivers.length > 0 ? (
+                  filteredCaregivers.map((caregiver) => (
                   <Card key={caregiver.id} className="hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-4">
@@ -238,7 +325,20 @@ export function CaregiverMatchDemo() {
                       </Button>
                     </CardContent>
                   </Card>
-                ))}
+                  ))
+                ) : (
+                  <Card className="p-6">
+                    <CardContent className="text-center py-8">
+                      <User className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold text-gray-600 mb-2">
+                        Δεν βρέθηκαν φροντιστές
+                      </h3>
+                      <p className="text-gray-500 mb-4">
+                        Δοκιμάστε να αλλάξετε τα κριτήρια αναζήτησης για να δείτε περισσότερα αποτελέσματα.
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
 
                 <Card className="bg-blue-50 border-blue-200">
                   <CardContent className="p-6 text-center">

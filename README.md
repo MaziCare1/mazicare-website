@@ -1,4 +1,4 @@
-# MerimnaCare - Φροντίδα Ηλικιωμένων
+# MaziCare - Φροντίδα Ηλικιωμένων
 
 Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα.
 
@@ -13,7 +13,7 @@
 ## Project Structure
 
 ```
-MerimnaCare/
+MaziCare/
 ├── app/                    # Next.js App Router
 │   ├── layout.tsx         # Root layout with metadata
 │   ├── page.tsx           # Home page
@@ -100,9 +100,9 @@ This project follows Next.js and React best practices:
 
 ## License
 
-© 2024 MerimnaCare. All rights reserved.
+© 2024 MaziCare. All rights reserved.
 
 ---
 
 **Founder:** Φώτιος Κουζιώρτης  
-**Contact:** info@merimnacare.gr | +30 6955 117 140
+**Contact:** info@mazicare.gr | +30 6955 117 140

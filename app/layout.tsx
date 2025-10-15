@@ -2,17 +2,17 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MerimnaCare - Φροντίδα Ηλικιωμένων στην Ελλάδα",
+  title: "MaziCare - Φροντίδα Ηλικιωμένων στην Ελλάδα",
   description: "Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. Συνδέουμε οικογένειες με επαληθευμένους φροντιστές.",
   keywords: ["φροντίδα ηλικιωμένων", "caregiver", "elderly care", "Ελλάδα", "Greece"],
-  authors: [{ name: "MerimnaCare" }],
+  authors: [{ name: "MaziCare" }],
   openGraph: {
     type: "website",
     locale: "el_GR",
-    url: "https://merimnacare.com",
-    title: "MerimnaCare - Φροντίδα Ηλικιωμένων",
+    url: "https://mazicare.com",
+    title: "MaziCare - Φροντίδα Ηλικιωμένων",
     description: "Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα.",
-    siteName: "MerimnaCare",
+    siteName: "MaziCare",
   },
 };
 

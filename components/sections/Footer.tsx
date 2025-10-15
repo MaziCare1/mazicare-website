@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">MerimnaCare</h3>
+            <h3 className="text-2xl font-bold mb-4">MaziCare</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. 
               Συνδέουμε οικογένειες με επαληθευμένους φροντιστές με αξιοπρέπεια, ασφάλεια και καινοτομία.
@@ -122,7 +122,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p className="text-sm">
-            © {new Date().getFullYear()} MerimnaCare. Όλα τα δικαιώματα κατοχυρωμένα. 
+            © {new Date().getFullYear()} MaziCare. Όλα τα δικαιώματα κατοχυρωμένα. 
             Φροντίδα με αξιοπρέπεια για κάθε ελληνική οικογένεια.
           </p>
         </div>

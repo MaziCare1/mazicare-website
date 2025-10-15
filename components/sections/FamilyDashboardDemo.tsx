@@ -93,7 +93,7 @@ export function FamilyDashboardDemo() {
             Μείνετε Συνδεδεμένοι — Δείτε τον Οικογενειακό Πίνακα Ελέγχου
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            Ο Οικογενειακός Πίνακας Ελέγχου της MerimnaCare σας προσφέρει ενημερώσεις σε πραγματικό χρόνο 
+            Ο Οικογενειακός Πίνακας Ελέγχου της MaziCare σας προσφέρει ενημερώσεις σε πραγματικό χρόνο 
             για τη φροντίδα του αγαπημένου σας προσώπου — από τα γεύματα και τα φάρμακα μέχρι τη διάθεση 
             και τις καθημερινές δραστηριότητες. Είτε βρίσκεστε κοντά είτε στο εξωτερικό, 
             θα γνωρίζετε πάντα πώς είναι ο ηλικιωμένος σας.
@@ -202,7 +202,7 @@ export function FamilyDashboardDemo() {
                 <Card>
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
-                      <span>Πίνακας Ελέγχου - {formData.elderlyName || "Μαρία Π."}</span>
+                      <span>Πίνακας Ελέγχου - {formData.elderlyName}</span>
                       <Badge variant="secondary">Live</Badge>
                     </CardTitle>
                   </CardHeader>
@@ -217,95 +217,155 @@ export function FamilyDashboardDemo() {
                       <TabsContent value="today" className="space-y-4">
                         {/* Daily Overview */}
                         <div className="grid grid-cols-2 gap-4">
-                          <Card className="p-4">
-                            <div className="flex items-center gap-2">
-                              <Pill className="h-5 w-5 text-blue-600" />
-                              <span className="text-sm font-medium">Φάρμακα</span>
-                            </div>
-                            <div className="mt-2">
-                              <Progress value={75} className="h-2" />
-                              <p className="text-xs text-gray-600 mt-1">3/4 δόσεις</p>
-                            </div>
-                          </Card>
+                          {formData.notifications.includes("Χαμένα φάρμακα") && (
+                            <Card className="p-4">
+                              <div className="flex items-center gap-2">
+                                <Pill className="h-5 w-5 text-blue-600" />
+                                <span className="text-sm font-medium">Φάρμακα</span>
+                              </div>
+                              <div className="mt-2">
+                                <Progress value={75} className="h-2" />
+                                <p className="text-xs text-gray-600 mt-1">3/4 δόσεις</p>
+                              </div>
+                            </Card>
+                          )}
 
-                          <Card className="p-4">
-                            <div className="flex items-center gap-2">
-                              <Heart className="h-5 w-5 text-red-500" />
-                              <span className="text-sm font-medium">Διάθεση</span>
-                            </div>
-                            <div className="mt-2 flex items-center gap-1">
-                              <Smile className="h-5 w-5 text-green-500" />
-                              <span className="text-sm">Καλή</span>
-                            </div>
-                          </Card>
+                          {formData.notifications.includes("Αλλαγές διάθεσης") && (
+                            <Card className="p-4">
+                              <div className="flex items-center gap-2">
+                                <Heart className="h-5 w-5 text-red-500" />
+                                <span className="text-sm font-medium">Διάθεση</span>
+                              </div>
+                              <div className="mt-2 flex items-center gap-1">
+                                <Smile className="h-5 w-5 text-green-500" />
+                                <span className="text-sm">Καλή</span>
+                              </div>
+                            </Card>
+                          )}
                         </div>
 
                         {/* Schedule */}
                         <Card className="p-4">
                           <h4 className="font-medium mb-3 flex items-center gap-2">
                             <Calendar className="h-4 w-4" />
-                            Σημερινό Πρόγραμμα
+                            Σημερινό Πρόγραμμα - {
+                              formData.schedule === "morning" ? "Πρωινό (08:00-14:00)" :
+                              formData.schedule === "afternoon" ? "Απογευματινό (14:00-20:00)" :
+                              formData.schedule === "full-day" ? "Ολοήμερο (08:00-20:00)" :
+                              "24/7"
+                            }
                           </h4>
                           <div className="space-y-2">
-                            <div className="flex items-center justify-between text-sm">
-                              <span>09:00 - Πρωινό φάρμακο</span>
-                              <CheckCircle className="h-4 w-4 text-green-500" />
-                            </div>
-                            <div className="flex items-center justify-between text-sm">
-                              <span>12:00 - Γεύμα</span>
-                              <CheckCircle className="h-4 w-4 text-green-500" />
-                            </div>
-                            <div className="flex items-center justify-between text-sm">
-                              <span>15:00 - Απογευματινό φάρμακο</span>
-                              <Clock className="h-4 w-4 text-orange-500" />
-                            </div>
-                            <div className="flex items-center justify-between text-sm">
-                              <span>19:00 - Δείπνο</span>
-                              <Clock className="h-4 w-4 text-gray-400" />
-                            </div>
+                            {(formData.schedule === "morning" || formData.schedule === "full-day" || formData.schedule === "24-7") && (
+                              <>
+                                <div className="flex items-center justify-between text-sm">
+                                  <span>09:00 - Πρωινό φάρμακο</span>
+                                  <CheckCircle className="h-4 w-4 text-green-500" />
+                                </div>
+                                <div className="flex items-center justify-between text-sm">
+                                  <span>12:00 - Γεύμα</span>
+                                  <CheckCircle className="h-4 w-4 text-green-500" />
+                                </div>
+                              </>
+                            )}
+                            {(formData.schedule === "afternoon" || formData.schedule === "full-day" || formData.schedule === "24-7") && (
+                              <>
+                                <div className="flex items-center justify-between text-sm">
+                                  <span>15:00 - Απογευματινό φάρμακο</span>
+                                  <Clock className="h-4 w-4 text-orange-500" />
+                                </div>
+                                <div className="flex items-center justify-between text-sm">
+                                  <span>19:00 - Δείπνο</span>
+                                  <Clock className="h-4 w-4 text-gray-400" />
+                                </div>
+                              </>
+                            )}
+                            {formData.schedule === "24-7" && (
+                              <div className="flex items-center justify-between text-sm">
+                                <span>22:00 - Βραδινό φάρμακο</span>
+                                <Clock className="h-4 w-4 text-gray-400" />
+                              </div>
+                            )}
                           </div>
                         </Card>
 
                         {/* Notifications */}
-                        <Card className="p-4">
-                          <h4 className="font-medium mb-3">Πρόσφατες Ειδοποιήσεις</h4>
-                          <div className="space-y-2">
-                            {mockNotifications.map((notif) => (
-                              <div key={notif.id} className="flex items-start gap-2 text-sm">
-                                {notif.type === "success" && <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />}
-                                {notif.type === "warning" && <AlertTriangle className="h-4 w-4 text-orange-500 mt-0.5" />}
-                                {notif.type === "info" && <Activity className="h-4 w-4 text-blue-500 mt-0.5" />}
-                                <div>
-                                  <p>{notif.message}</p>
-                                  <p className="text-gray-500 text-xs">{notif.time}</p>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </Card>
+                        {formData.notifications.length > 0 && (
+                          <Card className="p-4">
+                            <h4 className="font-medium mb-3">Πρόσφατες Ειδοποιήσεις</h4>
+                            <div className="space-y-2">
+                              {mockNotifications
+                                .filter((notif) => {
+                                  if (notif.type === "success" && formData.notifications.includes("Ειδοποιήσεις υγείας")) return true;
+                                  if (notif.type === "warning" && formData.notifications.includes("Χαμένα φάρμακα")) return true;
+                                  if (notif.type === "info" && formData.notifications.includes("Γεύματα")) return true;
+                                  return false;
+                                })
+                                .map((notif) => (
+                                  <div key={notif.id} className="flex items-start gap-2 text-sm">
+                                    {notif.type === "success" && <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />}
+                                    {notif.type === "warning" && <AlertTriangle className="h-4 w-4 text-orange-500 mt-0.5" />}
+                                    {notif.type === "info" && <Activity className="h-4 w-4 text-blue-500 mt-0.5" />}
+                                    <div>
+                                      <p>{notif.message}</p>
+                                      <p className="text-gray-500 text-xs">{notif.time}</p>
+                                    </div>
+                                  </div>
+                                ))}
+                              {mockNotifications.filter((notif) => {
+                                if (notif.type === "success" && formData.notifications.includes("Ειδοποιήσεις υγείας")) return true;
+                                if (notif.type === "warning" && formData.notifications.includes("Χαμένα φάρμακα")) return true;
+                                if (notif.type === "info" && formData.notifications.includes("Γεύματα")) return true;
+                                return false;
+                              }).length === 0 && (
+                                <p className="text-sm text-gray-500">
+                                  Δεν υπάρχουν ειδοποιήσεις για τις επιλεγμένες κατηγορίες.
+                                </p>
+                              )}
+                            </div>
+                          </Card>
+                        )}
                       </TabsContent>
 
                       <TabsContent value="week" className="space-y-4">
                         <Card className="p-4">
                           <h4 className="font-medium mb-4">Εβδομαδιαία Αναφορά</h4>
                           <div className="space-y-3">
-                            <div className="flex justify-between">
-                              <span className="text-sm">Φάρμακα (συμμόρφωση)</span>
-                              <span className="text-sm font-medium">95%</span>
-                            </div>
-                            <Progress value={95} className="h-2" />
+                            {formData.notifications.includes("Χαμένα φάρμακα") && (
+                              <>
+                                <div className="flex justify-between">
+                                  <span className="text-sm">Φάρμακα (συμμόρφωση)</span>
+                                  <span className="text-sm font-medium">95%</span>
+                                </div>
+                                <Progress value={95} className="h-2" />
+                              </>
+                            )}
                             
-                            <div className="flex justify-between">
-                              <span className="text-sm">Γεύματα</span>
-                              <span className="text-sm font-medium">100%</span>
-                            </div>
-                            <Progress value={100} className="h-2" />
+                            {formData.notifications.includes("Γεύματα") && (
+                              <>
+                                <div className="flex justify-between">
+                                  <span className="text-sm">Γεύματα</span>
+                                  <span className="text-sm font-medium">100%</span>
+                                </div>
+                                <Progress value={100} className="h-2" />
+                              </>
+                            )}
                             
-                            <div className="flex justify-between">
-                              <span className="text-sm">Δραστηριότητες</span>
-                              <span className="text-sm font-medium">85%</span>
-                            </div>
-                            <Progress value={85} className="h-2" />
+                            {formData.notifications.includes("Δραστηριότητες") && (
+                              <>
+                                <div className="flex justify-between">
+                                  <span className="text-sm">Δραστηριότητες</span>
+                                  <span className="text-sm font-medium">85%</span>
+                                </div>
+                                <Progress value={85} className="h-2" />
+                              </>
+                            )}
+
+                            {formData.notifications.length === 0 && (
+                              <p className="text-sm text-gray-500">
+                                Επιλέξτε κατηγορίες ειδοποιήσεων για να δείτε την εβδομαδιαία αναφορά.
+                              </p>
+                            )}
                           </div>
                         </Card>
                       </TabsContent>
@@ -314,14 +374,14 @@ export function FamilyDashboardDemo() {
                         <Card className="p-4">
                           <h4 className="font-medium mb-4 flex items-center gap-2">
                             <MessageCircle className="h-4 w-4" />
-                            Μηνύματα με Φροντιστή
+                            Μηνύματα με {formData.caregiverName || "Φροντιστή"}
                           </h4>
                           <div className="space-y-3">
                             <div className="bg-blue-50 p-3 rounded-lg">
                               <p className="text-sm">
-                                &ldquo;Η κυρία Μαρία είχε πολύ καλή διάθεση σήμερα. Κάναμε έναν περίπατο στον κήπο.&rdquo;
+                                &ldquo;{formData.elderlyName ? `Ο/Η ${formData.elderlyName.split(' ')[0]}` : 'Ο/Η ηλικιωμένος/η'} είχε πολύ καλή διάθεση σήμερα. Κάναμε έναν περίπατο στον κήπο.&rdquo;
                               </p>
-                              <p className="text-xs text-gray-500 mt-1">Ελένη - 14:30</p>
+                              <p className="text-xs text-gray-500 mt-1">{formData.caregiverName.split(' ')[0] || "Φροντιστής"} - 14:30</p>
                             </div>
                             <div className="bg-gray-50 p-3 rounded-lg">
                               <p className="text-sm">

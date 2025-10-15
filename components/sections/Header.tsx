@@ -23,12 +23,12 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Image 
               src="/assets/logo.png" 
-              alt="MerimnaCare Logo" 
+              alt="MaziCare Logo" 
               width={40} 
               height={40}
               className="rounded-full" 
             />
-            <h1 className="text-2xl font-bold text-primary">MerimnaCare</h1>
+            <h1 className="text-2xl font-bold text-primary">MaziCare</h1>
           </div>
 
           {/* Desktop Navigation */}

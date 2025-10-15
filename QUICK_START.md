@@ -4,7 +4,7 @@
 
 ### What Was Done
 
-Your MerimnaCare project has been completely migrated from Vite to Next.js 15 with:
+Your MaziCare project has been completely migrated from Vite to Next.js 15 with:
 - ✅ Professional folder structure following Next.js best practices
 - ✅ All components migrated and organized properly
 - ✅ Tailwind CSS v4 fully configured
@@ -16,7 +16,7 @@ Your MerimnaCare project has been completely migrated from Vite to Next.js 15 wi
 ### Folder Structure
 
 ```
-MerimnaCare/
+MaziCare/
 ├── app/                      # Next.js App Router
 │   ├── layout.tsx           # Root layout with SEO metadata
 │   ├── page.tsx             # Home page
