@@ -23,7 +23,7 @@ export function ServicesSection() {
         {/* Πώς Σας Υποστηρίζουμε */}
         <div className="mb-16">
           <h3 className="text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-12">
-            Πώς Σας Υποστηρίζουμε
+            Πώς σας Υποστηρίζουμε
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-blue-500">

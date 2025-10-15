@@ -22,12 +22,12 @@ interface CaregiverProfile {
 
 export function CaregiverMatchDemo() {
   const [formData, setFormData] = useState({
-    area: "",
-    careType: "",
-    gender: "",
-    schedule: "",
+    area: "athens-center",
+    careType: "medical",
+    gender: "no-preference",
+    schedule: "weekdays",
   });
-  const [showResults, setShowResults] = useState(false);
+  const [showResults, setShowResults] = useState(true);
 
   const mockCaregivers: CaregiverProfile[] = [
     {
@@ -90,6 +90,24 @@ export function CaregiverMatchDemo() {
           </p>
         </div>
 
+        {/* Demo Disclaimer */}
+        <div className="mb-8 bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0">
+              <svg className="h-5 w-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-blue-900 mb-1">Διαδραστική Επίδειξη</h3>
+              <p className="text-sm text-blue-800">
+                Αυτή είναι μια προσομοίωση της πλατφόρμας μας. Τα δεδομένα που εμφανίζονται είναι ενδεικτικά. 
+                Τροποποιήστε τις επιλογές για να δείτε πώς λειτουργεί η αναζήτηση φροντιστών.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Demo Form */}
           <Card className="p-6">
@@ -100,14 +118,12 @@ export function CaregiverMatchDemo() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="area">Περιοχή</Label>
-                  <Select value={formData.area} onValueChange={(value) => setFormData({...formData, area: value})}>
+                  <Select key="area-select" value={formData.area} onValueChange={(value) => setFormData({...formData, area: value})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Επιλέξτε περιοχή" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="athens-center">Αθήνα, Κέντρο</SelectItem>
-                      <SelectItem value="athens-north">Αθήνα, Βόρεια Προάστια</SelectItem>
-                      <SelectItem value="athens-south">Αθήνα, Νότια Προάστια</SelectItem>
                       <SelectItem value="thessaloniki">Θεσσαλονίκη</SelectItem>
                       <SelectItem value="crete">Κρήτη</SelectItem>
                     </SelectContent>
@@ -116,7 +132,7 @@ export function CaregiverMatchDemo() {
 
                 <div>
                   <Label htmlFor="careType">Είδος φροντίδας</Label>
-                  <Select value={formData.careType} onValueChange={(value) => setFormData({...formData, careType: value})}>
+                  <Select key="careType-select" value={formData.careType} onValueChange={(value) => setFormData({...formData, careType: value})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Επιλέξτε είδος φροντίδας" />
                     </SelectTrigger>
@@ -131,7 +147,7 @@ export function CaregiverMatchDemo() {
 
                 <div>
                   <Label htmlFor="gender">Προτιμώμενο φύλο φροντιστή</Label>
-                  <Select value={formData.gender} onValueChange={(value) => setFormData({...formData, gender: value})}>
+                  <Select key="gender-select" value={formData.gender} onValueChange={(value) => setFormData({...formData, gender: value})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Επιλέξτε προτίμηση" />
                     </SelectTrigger>
@@ -145,7 +161,7 @@ export function CaregiverMatchDemo() {
 
                 <div>
                   <Label htmlFor="schedule">Ημέρες/ώρες φροντίδας</Label>
-                  <Select value={formData.schedule} onValueChange={(value) => setFormData({...formData, schedule: value})}>
+                  <Select key="schedule-select" value={formData.schedule} onValueChange={(value) => setFormData({...formData, schedule: value})}>
                     <SelectTrigger>
                       <SelectValue placeholder="Επιλέξτε πρόγραμμα" />
                     </SelectTrigger>

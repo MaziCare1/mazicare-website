@@ -8,6 +8,9 @@ import { cn } from "@/lib/utils"
 
 const Select = SelectPrimitive.Root
 
+type SelectProps = React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root>
+export type { SelectProps }
+
 const SelectGroup = SelectPrimitive.Group
 
 const SelectValue = SelectPrimitive.Value
@@ -81,6 +84,7 @@ const SelectContent = React.forwardRef<
         className
       )}
       position={position}
+      sideOffset={4}
       {...props}
     >
       <SelectScrollUpButton />

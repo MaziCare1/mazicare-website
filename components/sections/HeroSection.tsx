@@ -23,9 +23,7 @@ export function HeroSection() {
               <span className="text-blue-600">ανθρώπους</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. 
-              Συνδέουμε οικογένειες με επαληθευμένους φροντιστές και παρέχουμε ηρεμία 
-              μέσω τεχνολογίας και ενσυναίσθησης.
+            Ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. Συνδέουμε οικογένειες με επαληθευμένους φροντιστές και παρέχουμε ηρεμία μέσω τεχνολογίας και ενσυναίσθησης.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -54,7 +52,7 @@ export function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <Heart className="h-5 w-5 text-red-500" />
-                <span>24/7 Υποστήριξη</span>
+                <span>Κοινωνική Υποστήριξη</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-green-600" />

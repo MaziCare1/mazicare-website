@@ -74,8 +74,8 @@ export function Footer() {
             <div className="space-y-3 text-gray-300">
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4" />
-                <a href="mailto:info@merimnacare.gr" className="hover:text-white transition-colors">
-                  info@merimnacare.gr
+                <a href="mailto:info@mazicare.gr" className="hover:text-white transition-colors">
+                  info@mazicare.gr
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -87,23 +87,23 @@ export function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-1" />
                 <div>
-                  <p>Αθήνα, Ελλάδα</p>
+                  <p>Ελλάδα</p>
                   <p className="text-sm text-gray-400">
-                    Σύντομα σε Θεσσαλονίκη και Κρήτη
+                    Σύντομα κοντά σας
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Founder Info */}
-            <div className="mt-6 pt-6 border-t border-gray-700">
+            {/* <div className="mt-6 pt-6 border-t border-gray-700">
               <p className="text-sm text-gray-400">
                 Ιδρυτής: <span className="text-white">Φώτιος Κουζιώρτης</span>
               </p>
               <p className="text-xs text-gray-500 mt-1">
                 Εμπνευσμένο από την προσωπική εμπειρία φροντίδας παππούδων
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -122,12 +122,12 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p className="text-sm">
-            © 2024 MerimnaCare. Όλα τα δικαιώματα κατοχυρωμένα. 
+            © {new Date().getFullYear()} MerimnaCare. Όλα τα δικαιώματα κατοχυρωμένα. 
             Φροντίδα με αξιοπρέπεια για κάθε ελληνική οικογένεια.
           </p>
         </div>
       </div>
-    </footer>
+    </footer> 
   );
 }
 
