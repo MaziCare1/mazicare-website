@@ -16,6 +16,7 @@ export function WaitlistSection() {
     fullName: "",
     email: "",
     city: "",
+    customCity: "",
     role: "",
     agreeToTerms: false,
   });
@@ -130,7 +131,7 @@ export function WaitlistSection() {
 
               <div>
                 <Label htmlFor="city">Πόλη *</Label>
-                <Select value={formData.city} onValueChange={(value) => setFormData({...formData, city: value})}>
+                <Select value={formData.city} onValueChange={(value) => setFormData({...formData, city: value, customCity: value !== "other" ? "" : formData.customCity})}>
                   <SelectTrigger>
                     <SelectValue placeholder="Επιλέξτε πόλη" />
                   </SelectTrigger>
@@ -142,6 +143,19 @@ export function WaitlistSection() {
                   </SelectContent>
                 </Select>
               </div>
+
+              {formData.city === "other" && (
+                <div className="animate-in slide-in-from-top-2 duration-200">
+                  <Label htmlFor="customCity">Ποια περιοχή; *</Label>
+                  <Input
+                    id="customCity"
+                    required
+                    value={formData.customCity}
+                    onChange={(e) => setFormData({...formData, customCity: e.target.value})}
+                    placeholder="π.χ. Πάτρα, Ηράκλειο, κλπ."
+                  />
+                </div>
+              )}
 
               <div>
                 <Label htmlFor="role">Ρόλος *</Label>
