@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: "Η πρώτη ολοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. Συνδέουμε οικογένειες με επαληθευμένους φροντιστές.",
   keywords: ["φροντίδα ηλικιωμένων", "caregiver", "elderly care", "Ελλάδα", "Greece"],
   authors: [{ name: "MaziCare" }],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "el_GR",

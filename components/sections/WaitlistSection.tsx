@@ -21,20 +21,89 @@ export function WaitlistSection() {
     agreeToTerms: false,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    console.log("Form submitted with data:", formData);
+
+    // Validate all required fields
+    if (!formData.fullName.trim()) {
+      toast.error("Παρακαλώ συμπληρώστε το ονοματεπώνυμό σας");
+      return;
+    }
+
+    if (!formData.email.trim()) {
+      toast.error("Παρακαλώ συμπληρώστε το email σας");
+      return;
+    }
+
+    if (!formData.city) {
+      toast.error("Παρακαλώ επιλέξτε πόλη");
+      return;
+    }
+
+    // Validate custom city if "other" is selected
+    if (formData.city === "other" && !formData.customCity.trim()) {
+      toast.error("Παρακαλώ συμπληρώστε την περιοχή σας");
+      return;
+    }
+
+    if (!formData.role) {
+      toast.error("Παρακαλώ επιλέξτε ρόλο");
+      return;
+    }
+
     if (!formData.agreeToTerms) {
       toast.error("Παρακαλώ συμφωνήστε με τους όρους χρήσης");
       return;
     }
 
-    // Simulate API call
-    setTimeout(() => {
+    setIsSubmitting(true);
+    console.log("Starting submission...");
+
+    try {
+      // Prepare data - use custom city if "other" is selected
+      const cityValue = formData.city === "other" ? formData.customCity : formData.city;
+      
+      const submitData = {
+        fullName: formData.fullName,
+        email: formData.email,
+        city: cityValue,
+        role: formData.role,
+        timestamp: new Date().toISOString(),
+      };
+
+      console.log("Sending data to API:", submitData);
+
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submitData),
+      });
+
+      console.log("API Response status:", response.status);
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("API Error response:", errorText);
+        throw new Error("Failed to submit form");
+      }
+
+      const responseData = await response.text();
+      console.log("API Success response:", responseData);
+
       setIsSubmitted(true);
       toast.success("Η εγγραφή σας καταχωρήθηκε επιτυχώς!");
-    }, 1000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Παρουσιάστηκε σφάλμα. Παρακαλώ δοκιμάστε ξανά.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -190,8 +259,8 @@ export function WaitlistSection() {
                 </Label>
               </div>
 
-              <Button type="submit" className="w-full" size="lg">
-                Εγγραφή στη Λίστα Αναμονής
+              <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                {isSubmitting ? "Καταχώρηση..." : "Εγγραφή στη Λίστα Αναμονής"}
               </Button>
             </form>
           </CardContent>
