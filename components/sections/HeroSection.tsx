@@ -45,18 +45,18 @@ export function HeroSection() {
               </Button>
             </div>
 
-            <div className="flex items-center gap-8 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-blue-600" />
-                <span>Επαληθευμένοι Φροντιστές</span>
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <Shield className="h-5 w-5 flex-shrink-0 text-blue-600" />
+                <span className="text-xs sm:text-sm">Επαληθευμένοι Φροντιστές</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Heart className="h-5 w-5 text-red-500" />
-                <span>Κοινωνική Υποστήριξη</span>
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <Heart className="h-5 w-5 flex-shrink-0 text-red-500" />
+                <span className="text-xs sm:text-sm">Κοινωνική Υποστήριξη</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-green-600" />
-                <span>Οικογενειακή Φροντίδα</span>
+              <div className="flex items-center gap-2 whitespace-nowrap">
+                <Users className="h-5 w-5 flex-shrink-0 text-green-600" />
+                <span className="text-xs sm:text-sm">Οικογενειακή Φροντίδα</span>
               </div>
             </div>
           </div>

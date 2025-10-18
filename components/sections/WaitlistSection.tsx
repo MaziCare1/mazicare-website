@@ -119,7 +119,7 @@ export function WaitlistSection() {
             Ελέγξτε το email σας για περισσότερες πληροφορίες.
           </p>
           
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-12">
             <Card className="text-center p-6">
               <CardContent className="pt-0">
                 <Star className="h-8 w-8 text-yellow-500 mx-auto mb-3" />
@@ -267,7 +267,7 @@ export function WaitlistSection() {
         </Card>
 
         {/* Benefits */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-12">
           <Card className="text-center p-6 bg-white/80 backdrop-blur-sm">
             <CardContent className="pt-0">
               <Badge className="mb-3">Πρώιμη Πρόσβαση</Badge>

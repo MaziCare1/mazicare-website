@@ -22,7 +22,7 @@ export function AboutSection() {
           <h3 className="text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-12">
             Οι Βασικές μας Αξίες
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Card className="text-center p-6 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <Heart className="h-12 w-12 text-red-500 mx-auto mb-4" />

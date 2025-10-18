@@ -200,3 +200,26 @@ select, option, [role="combobox"], [role="option"], [role="listbox"] {
   translate: no;
 }
 
+/* Global responsive overflow and text wrapping fixes */
+body {
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Better text wrapping for long words (Greek text) */
+p, span, h1, h2, h3, h4, h5, h6, label, a {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure images and media respect container bounds */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+

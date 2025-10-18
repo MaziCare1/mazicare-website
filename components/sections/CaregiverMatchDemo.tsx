@@ -914,46 +914,46 @@ export function CaregiverMatchDemo() {
                 {filteredCaregivers.length > 0 ? (
                   filteredCaregivers.map((caregiver) => (
                   <Card key={caregiver.id} className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <User className="h-6 w-6 text-blue-600" />
+                    <CardContent className="p-4 sm:p-6">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-4">
+                        <div className="flex items-center gap-3 min-w-0 flex-1">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 bg-blue-100 rounded-full flex items-center justify-center">
+                            <User className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600" />
                           </div>
-                          <div>
-                            <h4 className="font-semibold text-lg">{caregiver.name}</h4>
-                            <p className="text-gray-600">{caregiver.experience}</p>
+                          <div className="min-w-0 flex-1">
+                            <h4 className="font-semibold text-base sm:text-lg break-words">{caregiver.name}</h4>
+                            <p className="text-sm text-gray-600 break-words">{caregiver.experience}</p>
                           </div>
                         </div>
                         {caregiver.verified && (
-                          <Badge variant="secondary" className="flex items-center gap-1">
-                            <CheckCircle className="h-3 w-3" />
+                          <Badge variant="secondary" className="flex items-center gap-1 self-start text-xs whitespace-nowrap">
+                            <CheckCircle className="h-3 w-3 flex-shrink-0" />
                             Επαληθευμένος
                           </Badge>
                         )}
                       </div>
 
-                      <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4">
                         <div className="flex items-center gap-2">
-                          <Star className="h-4 w-4 text-yellow-500" />
-                          <span className="text-sm">{caregiver.rating}/5.0</span>
+                          <Star className="h-4 w-4 flex-shrink-0 text-yellow-500" />
+                          <span className="text-xs sm:text-sm">{caregiver.rating}/5.0</span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <MapPin className="h-4 w-4 text-gray-500" />
-                          <span className="text-sm">{caregiver.location}</span>
+                          <MapPin className="h-4 w-4 flex-shrink-0 text-gray-500" />
+                          <span className="text-xs sm:text-sm">{caregiver.location}</span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="h-4 w-4 text-gray-500" />
-                          <span className="text-sm">{caregiver.availability}</span>
+                        <div className="flex items-start gap-2 sm:col-span-2">
+                          <Clock className="h-4 w-4 flex-shrink-0 text-gray-500 mt-0.5" />
+                          <span className="text-xs sm:text-sm break-words">{caregiver.availability}</span>
                         </div>
-                        <div className="text-sm font-semibold text-green-600">
+                        <div className="text-xs sm:text-sm font-semibold text-green-600">
                           {caregiver.price}
                         </div>
                       </div>
 
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
                         {caregiver.specialties.map((specialty) => (
-                          <Badge key={specialty} variant="outline" className="text-xs">
+                          <Badge key={specialty} variant="outline" className="text-xs whitespace-nowrap">
                             {specialty}
                           </Badge>
                         ))}

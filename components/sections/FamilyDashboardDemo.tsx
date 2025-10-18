@@ -208,19 +208,19 @@ export function FamilyDashboardDemo() {
                   </CardHeader>
                   <CardContent>
                     <Tabs defaultValue="today" className="w-full">
-                      <TabsList className="grid w-full grid-cols-3">
-                        <TabsTrigger value="today">Σήμερα</TabsTrigger>
-                        <TabsTrigger value="week">Εβδομάδα</TabsTrigger>
-                        <TabsTrigger value="messages">Μηνύματα</TabsTrigger>
+                      <TabsList className="grid w-full grid-cols-2 gap-1">
+                        <TabsTrigger value="today" className="text-xs sm:text-sm">Σήμερα</TabsTrigger>
+                        <TabsTrigger value="week" className="text-xs sm:text-sm">Εβδομάδα</TabsTrigger>
+                        {/* <TabsTrigger value="messages">Μηνύματα</TabsTrigger> */}
                       </TabsList>
 
                       <TabsContent value="today" className="space-y-4">
                         {/* Daily Overview */}
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           {formData.notifications.includes("Χαμένα φάρμακα") && (
                             <Card className="p-4">
                               <div className="flex items-center gap-2">
-                                <Pill className="h-5 w-5 text-blue-600" />
+                                <Pill className="h-5 w-5 flex-shrink-0 text-blue-600" />
                                 <span className="text-sm font-medium">Φάρμακα</span>
                               </div>
                               <div className="mt-2">
@@ -233,11 +233,11 @@ export function FamilyDashboardDemo() {
                           {formData.notifications.includes("Αλλαγές διάθεσης") && (
                             <Card className="p-4">
                               <div className="flex items-center gap-2">
-                                <Heart className="h-5 w-5 text-red-500" />
+                                <Heart className="h-5 w-5 flex-shrink-0 text-red-500" />
                                 <span className="text-sm font-medium">Διάθεση</span>
                               </div>
                               <div className="mt-2 flex items-center gap-1">
-                                <Smile className="h-5 w-5 text-green-500" />
+                                <Smile className="h-5 w-5 flex-shrink-0 text-green-500" />
                                 <span className="text-sm">Καλή</span>
                               </div>
                             </Card>
@@ -246,44 +246,44 @@ export function FamilyDashboardDemo() {
 
                         {/* Schedule */}
                         <Card className="p-4">
-                          <h4 className="font-medium mb-3 flex items-center gap-2">
-                            <Calendar className="h-4 w-4" />
-                            Σημερινό Πρόγραμμα - {
+                          <h4 className="font-medium mb-3 flex items-start gap-2 text-sm sm:text-base">
+                            <Calendar className="h-4 w-4 flex-shrink-0 mt-0.5" />
+                            <span className="break-words">Σημερινό Πρόγραμμα - {
                               formData.schedule === "morning" ? "Πρωινό (08:00-14:00)" :
                               formData.schedule === "afternoon" ? "Απογευματινό (14:00-20:00)" :
                               formData.schedule === "full-day" ? "Ολοήμερο (08:00-20:00)" :
                               "24/7"
-                            }
+                            }</span>
                           </h4>
                           <div className="space-y-2">
                             {(formData.schedule === "morning" || formData.schedule === "full-day" || formData.schedule === "24-7") && (
                               <>
-                                <div className="flex items-center justify-between text-sm">
-                                  <span>09:00 - Πρωινό φάρμακο</span>
-                                  <CheckCircle className="h-4 w-4 text-green-500" />
+                                <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                                  <span className="break-words">09:00 - Πρωινό φάρμακο</span>
+                                  <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-500" />
                                 </div>
-                                <div className="flex items-center justify-between text-sm">
-                                  <span>12:00 - Γεύμα</span>
-                                  <CheckCircle className="h-4 w-4 text-green-500" />
+                                <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                                  <span className="break-words">12:00 - Γεύμα</span>
+                                  <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-500" />
                                 </div>
                               </>
                             )}
                             {(formData.schedule === "afternoon" || formData.schedule === "full-day" || formData.schedule === "24-7") && (
                               <>
-                                <div className="flex items-center justify-between text-sm">
-                                  <span>15:00 - Απογευματινό φάρμακο</span>
-                                  <Clock className="h-4 w-4 text-orange-500" />
+                                <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                                  <span className="break-words">15:00 - Απογευματινό φάρμακο</span>
+                                  <Clock className="h-4 w-4 flex-shrink-0 text-orange-500" />
                                 </div>
-                                <div className="flex items-center justify-between text-sm">
-                                  <span>19:00 - Δείπνο</span>
-                                  <Clock className="h-4 w-4 text-gray-400" />
+                                <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                                  <span className="break-words">19:00 - Δείπνο</span>
+                                  <Clock className="h-4 w-4 flex-shrink-0 text-gray-400" />
                                 </div>
                               </>
                             )}
                             {formData.schedule === "24-7" && (
-                              <div className="flex items-center justify-between text-sm">
-                                <span>22:00 - Βραδινό φάρμακο</span>
-                                <Clock className="h-4 w-4 text-gray-400" />
+                              <div className="flex items-center justify-between gap-2 text-xs sm:text-sm">
+                                <span className="break-words">22:00 - Βραδινό φάρμακο</span>
+                                <Clock className="h-4 w-4 flex-shrink-0 text-gray-400" />
                               </div>
                             )}
                           </div>
@@ -302,12 +302,12 @@ export function FamilyDashboardDemo() {
                                   return false;
                                 })
                                 .map((notif) => (
-                                  <div key={notif.id} className="flex items-start gap-2 text-sm">
-                                    {notif.type === "success" && <CheckCircle className="h-4 w-4 text-green-500 mt-0.5" />}
-                                    {notif.type === "warning" && <AlertTriangle className="h-4 w-4 text-orange-500 mt-0.5" />}
-                                    {notif.type === "info" && <Activity className="h-4 w-4 text-blue-500 mt-0.5" />}
-                                    <div>
-                                      <p>{notif.message}</p>
+                                  <div key={notif.id} className="flex items-start gap-2 text-xs sm:text-sm">
+                                    {notif.type === "success" && <CheckCircle className="h-4 w-4 flex-shrink-0 text-green-500 mt-0.5" />}
+                                    {notif.type === "warning" && <AlertTriangle className="h-4 w-4 flex-shrink-0 text-orange-500 mt-0.5" />}
+                                    {notif.type === "info" && <Activity className="h-4 w-4 flex-shrink-0 text-blue-500 mt-0.5" />}
+                                    <div className="min-w-0 flex-1">
+                                      <p className="break-words">{notif.message}</p>
                                       <p className="text-gray-500 text-xs">{notif.time}</p>
                                     </div>
                                   </div>
@@ -370,7 +370,7 @@ export function FamilyDashboardDemo() {
                         </Card>
                       </TabsContent>
 
-                      <TabsContent value="messages" className="space-y-4">
+                      {/* <TabsContent value="messages" className="space-y-4">
                         <Card className="p-4">
                           <h4 className="font-medium mb-4 flex items-center gap-2">
                             <MessageCircle className="h-4 w-4" />
@@ -391,7 +391,7 @@ export function FamilyDashboardDemo() {
                             </div>
                           </div>
                         </Card>
-                      </TabsContent>
+                      </TabsContent> */}
                     </Tabs>
                   </CardContent>
                 </Card>

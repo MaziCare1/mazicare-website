@@ -4,9 +4,9 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="sm:col-span-2">
             <h3 className="text-2xl font-bold mb-4">MaziCare</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Oλοκληρωμένη ψηφιακή πλατφόρμα φροντίδας ηλικιωμένων στην Ελλάδα. 
@@ -25,9 +25,9 @@ export function Footer() {
               </p>
             </div>
 
-            <div className="flex items-center gap-2 text-sm text-gray-400">
-              <Heart className="h-4 w-4 text-red-500" />
-              <span>Φτιαγμένο με αγάπη για τις ελληνικές οικογένειες</span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400">
+              <Heart className="h-4 w-4 flex-shrink-0 text-red-500" />
+              <span className="break-words">Φτιαγμένο με αγάπη για τις ελληνικές οικογένειες</span>
             </div>
           </div>
 
@@ -71,21 +71,21 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h4 className="font-semibold mb-4">Επικοινωνία</h4>
-            <div className="space-y-3 text-gray-300">
+            <div className="space-y-3 text-gray-300 text-sm">
               <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4" />
-                <a href="mailto:info@mazicare.gr" className="hover:text-white transition-colors">
+                <Mail className="h-4 w-4 flex-shrink-0" />
+                <a href="mailto:info@mazicare.gr" className="hover:text-white transition-colors break-all">
                   info@mazicare.gr
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+306955117140" className="hover:text-white transition-colors">
+                <Phone className="h-4 w-4 flex-shrink-0" />
+                <a href="tel:+306955117140" className="hover:text-white transition-colors whitespace-nowrap">
                   +30 6955 117 140
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 mt-1" />
+                <MapPin className="h-4 w-4 flex-shrink-0 mt-1" />
                 <div>
                   <p>Ελλάδα</p>
                   <p className="text-sm text-gray-400">
@@ -110,12 +110,12 @@ export function Footer() {
         {/* Service Areas */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <h4 className="font-semibold mb-4 text-center">Περιοχές Εξυπηρέτησης</h4>
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Αθήνα</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Θεσσαλονίκη (Σύντομα)</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Κρήτη (Σύντομα)</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Πάτρα (Σύντομα)</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Λάρισα (Σύντομα)</span>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-300">
+            <span className="bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">Αθήνα (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">Θεσσαλονίκη (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">Κρήτη (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">Πάτρα (Σύντομα)</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full whitespace-nowrap">Λάρισα (Σύντομα)</span>
           </div>
         </div>
 
