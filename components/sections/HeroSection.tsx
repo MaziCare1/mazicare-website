@@ -15,7 +15,7 @@ export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20 lg:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center lg:items-start">
           <div className="lg:pr-8">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Η φροντίδα που αξίζει στους{" "}
@@ -38,7 +38,7 @@ export function HeroSection() {
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection('waitlist')}
                 className="text-lg px-8 py-3"
               >
                 Μάθετε Περισσότερα
@@ -61,14 +61,14 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-full">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full">
               <Image
                 src="/assets/bg_picture.png"
                 alt="Φροντίδα ηλικιωμένων με την οικογένεια"
                 width={1080}
-                height={500}
-                className="w-full h-[500px] object-cover"
+                height={400}
+                className="w-full h-[300px] sm:h-[350px] lg:h-full object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
