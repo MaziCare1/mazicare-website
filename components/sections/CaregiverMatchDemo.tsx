@@ -40,7 +40,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Δευτέρα-Παρασκευή, 08:00-16:00",
       specialties: ["Άνοια", "Φυσικοθεραπεία", "Διαβήτης"],
-      price: "15€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -51,7 +51,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Καρδιολογικά", "Συναισθηματική Υποστήριξη"],
-      price: "18€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     {
@@ -62,7 +62,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Σαββατοκύριακα, 09:00-21:00",
       specialties: ["Φυσικοθεραπεία", "Άνοια", "Διαβήτης"],
-      price: "17€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     {
@@ -73,7 +73,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Καθημερινά, 24/7",
       specialties: ["Καρδιολογικά", "Άνοια", "Φυσικοθεραπεία"],
-      price: "16€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     // ATHENS - BASIC CARE
@@ -96,7 +96,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Δευτέρα-Παρασκευή, 08:00-16:00",
       specialties: ["Βασική φροντίδα", "Μαγείρεμα", "Κινητικότητα"],
-      price: "11€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     {
@@ -119,7 +119,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Δευτέρα-Παρασκευή, 08:00-20:00",
       specialties: ["Αλτσχάιμερ", "Άνοια", "Ειδικές ανάγκες"],
-      price: "22€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -130,7 +130,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Σαββατοκύριακα, 08:00-20:00",
       specialties: ["Ειδικές ανάγκες", "Αλτσχάιμερ", "Άνοια"],
-      price: "21€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -141,7 +141,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Ειδικές ανάγκες", "Άνοια"],
-      price: "23€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     // ATHENS - COMPANIONSHIP
@@ -153,7 +153,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Δευτέρα-Παρασκευή, 10:00-18:00",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "10€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -164,7 +164,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Σαββατοκύριακα, 09:00-17:00",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "11€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -175,7 +175,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Καθημερινά, 24/7",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "12€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     
@@ -188,7 +188,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Δευτέρα-Παρασκευή, 09:00-17:00",
       specialties: ["Φυσικοθεραπεία", "Διαβήτης", "Κινητικότητα"],
-      price: "16€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -199,7 +199,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Σαββατοκύριακα, 08:00-20:00",
       specialties: ["Καρδιολογικά", "Φυσικοθεραπεία", "Άνοια"],
-      price: "15€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -210,7 +210,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Διαβήτης", "Καρδιολογικά"],
-      price: "19€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     // THESSALONIKI - BASIC CARE
@@ -256,7 +256,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Δευτέρα-Παρασκευή, 08:00-20:00",
       specialties: ["Άνοια", "Αλτσχάιμερ", "Ειδικές ανάγκες"],
-      price: "20€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -267,7 +267,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Σαββατοκύριακα, 10:00-20:00",
       specialties: ["Ειδικές ανάγκες", "Αλτσχάιμερ", "Άνοια"],
-      price: "19€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -278,7 +278,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Άνοια", "Ειδικές ανάγκες"],
-      price: "21€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     // THESSALONIKI - COMPANIONSHIP
@@ -290,7 +290,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Δευτέρα-Παρασκευή, 10:00-17:00",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "10€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -301,7 +301,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Σαββατοκύριακα, 09:00-18:00",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "11€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -312,7 +312,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Καθημερινά, 24/7",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "12€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     
@@ -325,7 +325,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Δευτέρα-Παρασκευή, 08:00-16:00",
       specialties: ["Φυσικοθεραπεία", "Διαβήτης", "Άνοια"],
-      price: "14€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -336,7 +336,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Σαββατοκύριακα, 09:00-19:00",
       specialties: ["Καρδιολογικά", "Φυσικοθεραπεία", "Διαβήτης"],
-      price: "15€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -347,7 +347,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Καθημερινά, 24/7",
       specialties: ["Αλτσχάιμερ", "Άνοια", "Καρδιολογικά"],
-      price: "17€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     // CRETE - BASIC CARE
@@ -393,7 +393,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Δευτέρα-Παρασκευή, 08:00-20:00",
       specialties: ["Αλτσχάιμερ", "Άνοια", "Ειδικές ανάγκες"],
-      price: "18€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -404,7 +404,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Σαββατοκύριακα, 09:00-21:00",
       specialties: ["Ειδικές ανάγκες", "Αλτσχάιμερ", "Άνοια"],
-      price: "17€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -415,7 +415,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Καθημερινά, 24/7",
       specialties: ["Άνοια", "Αλτσχάιμερ", "Ειδικές ανάγκες"],
-      price: "20€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     // CRETE - COMPANIONSHIP
@@ -427,7 +427,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Δευτέρα-Παρασκευή, 10:00-18:00",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "9€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -438,7 +438,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Σαββατοκύριακα, 09:00-17:00",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "10€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -449,7 +449,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Καθημερινά, 24/7",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "11€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     
@@ -462,7 +462,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Φυσικοθεραπεία", "Άνοια", "Καρδιολογικά"],
-      price: "16€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -473,7 +473,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Διαβήτης", "Καρδιολογικά", "Φυσικοθεραπεία"],
-      price: "17€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     {
@@ -484,7 +484,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Βασική φροντίδα", "Καθαριότητα", "Μαγείρεμα"],
-      price: "12€/ώρα",
+      price: "10€/ώρα",
       verified: true,
     },
     {
@@ -506,7 +506,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Αλτσχάιμερ", "Ειδικές ανάγκες", "Άνοια"],
-      price: "21€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -517,7 +517,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Άνοια", "Αλτσχάιμερ", "Ειδικές ανάγκες"],
-      price: "20€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -528,7 +528,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "11€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     {
@@ -539,7 +539,7 @@ export function CaregiverMatchDemo() {
       location: "Αθήνα",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "10€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     
@@ -552,7 +552,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Άνοια", "Φυσικοθεραπεία", "Διαβήτης"],
-      price: "15€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -563,7 +563,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Καρδιολογικά", "Διαβήτης", "Φυσικοθεραπεία"],
-      price: "16€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     {
@@ -574,7 +574,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Βασική φροντίδα", "Μαγείρεμα", "Κινητικότητα"],
-      price: "12€/ώρα",
+      price: "10€/ώρα",
       verified: true,
     },
     {
@@ -596,7 +596,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Ειδικές ανάγκες", "Αλτσχάιμερ", "Άνοια"],
-      price: "20€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -607,7 +607,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Αλτσχάιμερ", "Άνοια", "Ειδικές ανάγκες"],
-      price: "19€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -618,7 +618,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "10€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -629,7 +629,7 @@ export function CaregiverMatchDemo() {
       location: "Θεσσαλονίκη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "11€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     
@@ -642,7 +642,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Φυσικοθεραπεία", "Άνοια", "Διαβήτης"],
-      price: "15€/ώρα",
+      price: "11€/ώρα",
       verified: true,
     },
     {
@@ -653,7 +653,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Καρδιολογικά", "Φυσικοθεραπεία", "Διαβήτης"],
-      price: "16€/ώρα",
+      price: "12€/ώρα",
       verified: true,
     },
     {
@@ -664,7 +664,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Βασική φροντίδα", "Μαγείρεμα", "Καθαριότητα"],
-      price: "11€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
     {
@@ -686,7 +686,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Αλτσχάιμερ", "Ειδικές ανάγκες", "Άνοια"],
-      price: "19€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -697,7 +697,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Άνοια", "Αλτσχάιμερ", "Ειδικές ανάγκες"],
-      price: "20€/ώρα",
+      price: "13€/ώρα",
       verified: true,
     },
     {
@@ -708,7 +708,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "10€/ώρα",
+      price: "8€/ώρα",
       verified: true,
     },
     {
@@ -719,7 +719,7 @@ export function CaregiverMatchDemo() {
       location: "Κρήτη",
       availability: "Προσαρμοσμένο πρόγραμμα",
       specialties: ["Συντροφιά", "Συναισθηματική Υποστήριξη"],
-      price: "11€/ώρα",
+      price: "9€/ώρα",
       verified: true,
     },
   ];
