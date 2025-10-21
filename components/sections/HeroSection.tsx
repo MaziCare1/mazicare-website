@@ -41,7 +41,7 @@ export function HeroSection() {
                 onClick={() => scrollToSection('waitlist')}
                 className="text-lg px-8 py-3"
               >
-                Μάθετε Περισσότερα
+                Βρείτε ή Προσφέρετε Φροντίδα
               </Button>
             </div>
 
