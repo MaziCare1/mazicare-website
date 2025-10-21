@@ -1,4 +1,5 @@
 import { Heart, Mail, Phone, MapPin, Brain } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -36,39 +37,39 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Γρήγοροι Σύνδεσμοι</h4>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>
-                <a href="/#about" className="hover:text-white transition-colors">
+                <Link href="/#about" className="hover:text-white transition-colors">
                   Ποιοι Είμαστε
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="hover:text-white transition-colors">
                   Υπηρεσίες
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#demo" className="hover:text-white transition-colors">
+                <Link href="/#demo" className="hover:text-white transition-colors">
                   Demo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#waitlist" className="hover:text-white transition-colors">
+                <Link href="/#waitlist" className="hover:text-white transition-colors">
                   Εγγραφή
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/faq" className="hover:text-white transition-colors">
+                <Link href="/faq" className="hover:text-white transition-colors">
                   Συχνές Ερωτήσεις
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy" className="hover:text-white transition-colors">
+                <Link href="/privacy" className="hover:text-white transition-colors">
                   Πολιτική Απορρήτου
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/terms" className="hover:text-white transition-colors">
+                <Link href="/terms" className="hover:text-white transition-colors">
                   Όροι Χρήσης
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
