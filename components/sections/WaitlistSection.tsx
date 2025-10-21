@@ -249,11 +249,11 @@ export function WaitlistSection() {
                 />
                 <Label htmlFor="terms" className="text-sm leading-relaxed">
                   Συμφωνώ με την{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     Πολιτική Απορρήτου
                   </a>{" "}
                   και τους{" "}
-                  <a href="#" className="text-blue-600 hover:underline">
+                  <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                     Όρους Χρήσης
                   </a>
                 </Label>

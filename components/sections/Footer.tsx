@@ -34,34 +34,39 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-4">Γρήγοροι Σύνδεσμοι</h4>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <a href="/#about" className="hover:text-white transition-colors">
                   Ποιοι Είμαστε
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <a href="/#services" className="hover:text-white transition-colors">
                   Υπηρεσίες
                 </a>
               </li>
               <li>
-                <a href="#demo" className="hover:text-white transition-colors">
+                <a href="/#demo" className="hover:text-white transition-colors">
                   Demo
                 </a>
               </li>
               <li>
-                <a href="#waitlist" className="hover:text-white transition-colors">
+                <a href="/#waitlist" className="hover:text-white transition-colors">
                   Εγγραφή
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/faq" className="hover:text-white transition-colors">
+                  Συχνές Ερωτήσεις
+                </a>
+              </li>
+              <li>
+                <a href="/privacy" className="hover:text-white transition-colors">
                   Πολιτική Απορρήτου
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/terms" className="hover:text-white transition-colors">
                   Όροι Χρήσης
                 </a>
               </li>
