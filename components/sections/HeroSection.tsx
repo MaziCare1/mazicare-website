@@ -64,7 +64,7 @@ export function HeroSection() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1665567683724-bff463ac1676?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGRlcmx5JTIwY2FyZSUyMGdyZWVjZSUyMGZhbWlseXxlbnwxfHx8fDE3NTk3NTYwOTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="/assets/bg_picture.png"
                 alt="Φροντίδα ηλικιωμένων με την οικογένεια"
                 width={1080}
                 height={500}
