@@ -160,10 +160,10 @@ export function WaitlistSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-          Γίνετε μέλος στην κοινότητα MaziCare
+            Γίνετε μέλος στην κοινότητα MaziCare ΔΩΡΕΑΝ
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Γίνετε μέλος της κοινότητάς μας και αποκτήστε πρόσβαση σε αντιστοίχιση με φροντιστές, αποκλειστικές λειτουργίες και εξατομικευμένη υποστήριξη.
+          Είστε οικογένεια ή φροντιστής; Εξασφαλίστε ΔΩΡΕΑΝ πρώιμη πρόσβαση στην πλατφόρμα MaziCare. Οι θέσεις είναι περιορισμένες — εγγραφείτε στη λίστα αναμονής
           </p>
         </div>
 
