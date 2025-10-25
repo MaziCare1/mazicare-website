@@ -40,7 +40,7 @@ export function WaitlistSection() {
     }
 
     if (!formData.city) {
-      toast.error("Παρακαλώ επιλέξτε πόλη");
+      toast.error("Παρακαλώ επιλέξτε νομό");
       return;
     }
 
@@ -197,16 +197,66 @@ export function WaitlistSection() {
               </div>
 
               <div>
-                <Label htmlFor="city">Πόλη *</Label>
+                <Label htmlFor="city">Νομός *</Label>
                 <Select value={formData.city} onValueChange={(value) => setFormData({...formData, city: value, customCity: value !== "other" ? "" : formData.customCity})}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Επιλέξτε πόλη" />
+                    <SelectValue placeholder="Επιλέξτε νομό" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="athens">Αθήνα</SelectItem>
-                    <SelectItem value="thessaloniki">Θεσσαλονίκη</SelectItem>
-                    <SelectItem value="crete">Κρήτη</SelectItem>
-                    <SelectItem value="other">Άλλη περιοχή</SelectItem>
+                  <SelectContent className="max-h-[300px]">
+                    <SelectItem value="Έβρου">Έβρου</SelectItem>
+                    <SelectItem value="Ροδόπης">Ροδόπης</SelectItem>
+                    <SelectItem value="Ξάνθης">Ξάνθης</SelectItem>
+                    <SelectItem value="Δράμας">Δράμας</SelectItem>
+                    <SelectItem value="Καβάλας">Καβάλας</SelectItem>
+                    <SelectItem value="Θεσσαλονίκης">Θεσσαλονίκης</SelectItem>
+                    <SelectItem value="Χαλκιδικής">Χαλκιδικής</SelectItem>
+                    <SelectItem value="Ημαθίας">Ημαθίας</SelectItem>
+                    <SelectItem value="Κιλκίς">Κιλκίς</SelectItem>
+                    <SelectItem value="Πέλλας">Πέλλας</SelectItem>
+                    <SelectItem value="Πιερίας">Πιερίας</SelectItem>
+                    <SelectItem value="Σερρών">Σερρών</SelectItem>
+                    <SelectItem value="Κοζάνης">Κοζάνης</SelectItem>
+                    <SelectItem value="Φλώρινας">Φλώρινας</SelectItem>
+                    <SelectItem value="Γρεβενών">Γρεβενών</SelectItem>
+                    <SelectItem value="Καστοριάς">Καστοριάς</SelectItem>
+                    <SelectItem value="Ιωαννίνων">Ιωαννίνων</SelectItem>
+                    <SelectItem value="Άρτας">Άρτας</SelectItem>
+                    <SelectItem value="Πρέβεζας">Πρέβεζας</SelectItem>
+                    <SelectItem value="Θεσπρωτίας">Θεσπρωτίας</SelectItem>
+                    <SelectItem value="Λάρισας">Λάρισας</SelectItem>
+                    <SelectItem value="Καρδίτσας">Καρδίτσας</SelectItem>
+                    <SelectItem value="Μαγνησίας">Μαγνησίας</SelectItem>
+                    <SelectItem value="Τρικάλων">Τρικάλων</SelectItem>
+                    <SelectItem value="Βοιωτίας">Βοιωτίας</SelectItem>
+                    <SelectItem value="Ευβοίας">Ευβοίας</SelectItem>
+                    <SelectItem value="Ευρυτανίας">Ευρυτανίας</SelectItem>
+                    <SelectItem value="Φωκίδας">Φωκίδας</SelectItem>
+                    <SelectItem value="Φθιώτιδας">Φθιώτιδας</SelectItem>
+                    <SelectItem value="Κεφαλληνίας">Κεφαλληνίας</SelectItem>
+                    <SelectItem value="Κέρκυρας">Κέρκυρας</SelectItem>
+                    <SelectItem value="Λευκάδας">Λευκάδας</SelectItem>
+                    <SelectItem value="Ζακύνθου">Ζακύνθου</SelectItem>
+                    <SelectItem value="Αχαΐας">Αχαΐας</SelectItem>
+                    <SelectItem value="Ηλείας">Ηλείας</SelectItem>
+                    <SelectItem value="Αιτωλοακαρνανίας">Αιτωλοακαρνανίας</SelectItem>
+                    <SelectItem value="Αρκαδίας">Αρκαδίας</SelectItem>
+                    <SelectItem value="Αργολίδας">Αργολίδας</SelectItem>
+                    <SelectItem value="Κορινθίας">Κορινθίας</SelectItem>
+                    <SelectItem value="Λακωνίας">Λακωνίας</SelectItem>
+                    <SelectItem value="Μεσσηνίας">Μεσσηνίας</SelectItem>
+                    <SelectItem value="Αθηνών">Αθηνών</SelectItem>
+                    <SelectItem value="Ανατολικής Αττικής">Ανατολικής Αττικής</SelectItem>
+                    <SelectItem value="Πειραιώς">Πειραιώς</SelectItem>
+                    <SelectItem value="Δυτικής Αττικής">Δυτικής Αττικής</SelectItem>
+                    <SelectItem value="Χίου">Χίου</SelectItem>
+                    <SelectItem value="Λέσβου">Λέσβου</SelectItem>
+                    <SelectItem value="Σάμου">Σάμου</SelectItem>
+                    <SelectItem value="Κυκλάδων">Κυκλάδων</SelectItem>
+                    <SelectItem value="Δωδεκανήσου">Δωδεκανήσου</SelectItem>
+                    <SelectItem value="Ηρακλείου">Ηρακλείου</SelectItem>
+                    <SelectItem value="Χανίων">Χανίων</SelectItem>
+                    <SelectItem value="Λασιθίου">Λασιθίου</SelectItem>
+                    <SelectItem value="Ρεθύμνης">Ρεθύμνης</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -219,7 +269,7 @@ export function WaitlistSection() {
                     required
                     value={formData.customCity}
                     onChange={(e) => setFormData({...formData, customCity: e.target.value})}
-                    placeholder="π.χ. Πάτρα, Ηράκλειο, κλπ."
+                    placeholder="π.χ. Εκτός Ελλάδας"
                   />
                 </div>
               )}
