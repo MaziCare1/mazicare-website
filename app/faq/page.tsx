@@ -1,7 +1,36 @@
+import { Metadata } from "next";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { HelpCircle } from "lucide-react";
+import { pageSEO, siteConfig, generateBreadcrumbSchema } from "@/lib/seo.config";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+  title: pageSEO.faq.title,
+  description: pageSEO.faq.description,
+  keywords: pageSEO.faq.keywords,
+  openGraph: {
+    title: pageSEO.faq.title,
+    description: pageSEO.faq.description,
+    url: `${siteConfig.url}/faq`,
+    siteName: siteConfig.name,
+    locale: "el_GR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: pageSEO.faq.title,
+    description: pageSEO.faq.description,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/faq`,
+    languages: {
+      "el-GR": `${siteConfig.url}/faq`,
+      "en": `${siteConfig.url}/faq`,
+    },
+  },
+};
 
 export default function FAQPage() {
   const faqs = [
@@ -47,8 +76,42 @@ export default function FAQPage() {
     }
   ];
 
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Αρχική", url: siteConfig.url },
+    { name: "Συχνές Ερωτήσεις", url: `${siteConfig.url}/faq` },
+  ]);
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <Script
+        id="faq-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+        strategy="afterInteractive"
+      />
       <Header />
       <main className="overflow-x-hidden py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

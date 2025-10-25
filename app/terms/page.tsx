@@ -1,10 +1,56 @@
+import { Metadata } from "next";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { Card, CardContent } from "@/components/ui/card";
+import { pageSEO, siteConfig, generateBreadcrumbSchema } from "@/lib/seo.config";
+import Script from "next/script";
+
+export const metadata: Metadata = {
+  title: pageSEO.terms.title,
+  description: pageSEO.terms.description,
+  keywords: pageSEO.terms.keywords,
+  openGraph: {
+    title: pageSEO.terms.title,
+    description: pageSEO.terms.description,
+    url: `${siteConfig.url}/terms`,
+    siteName: siteConfig.name,
+    locale: "el_GR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: pageSEO.terms.title,
+    description: pageSEO.terms.description,
+  },
+  alternates: {
+    canonical: `${siteConfig.url}/terms`,
+    languages: {
+      "el-GR": `${siteConfig.url}/terms`,
+      "en": `${siteConfig.url}/terms`,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TermsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Αρχική", url: siteConfig.url },
+    { name: "Όροι Χρήσης", url: `${siteConfig.url}/terms` },
+  ]);
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <Script
+        id="terms-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+        strategy="afterInteractive"
+      />
       <Header />
       <main className="overflow-x-hidden py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
