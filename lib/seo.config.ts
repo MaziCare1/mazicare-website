@@ -204,7 +204,7 @@ export const siteConfig = {
   },
   contact: {
     email: "info@mazicare.gr",
-    phone: "+30-xxx-xxx-xxxx",
+    phone: "+30 6955 117 140",
   },
 };
 
@@ -212,7 +212,7 @@ export const siteConfig = {
 export const pageSEO = {
   home: {
     title: "MaziCare - Φροντίδα Ηλικιωμένων στην Ελλάδα | Elder Care Platform",
-    description: "Βρείτε τον ιδανικό φροντιστή για τους αγαπημένους σας. Επαληθευμένοι επαγγελματίες, 24/7 παρακολούθηση, ψηφιακό dashboard οικογένειας. Find verified caregivers for your loved ones in Greece.",
+    description: "Βρείτε τον ιδανικό φροντιστή για τους αγαπημένους σας. Επαληθευμένοι επαγγελματίες, 24/7 παρακολούθηση, ψηφιακό dashboard οικογένειας- Find verified caregivers for your loved ones in Greece.",
     keywords: [
       "φροντίδα ηλικιωμένων",
       "φροντιστής ηλικιωμένων",
