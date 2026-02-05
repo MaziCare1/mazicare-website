@@ -166,7 +166,7 @@ export const longTailKeywords = [
   "καλύτερες υπηρεσίες φροντίδας ηλικιωμένων",
   "elderly care app with family dashboard",
   "caregiver matching with background checks",
-  "24/7 elderly monitoring service",
+  // "24/7 elderly monitoring service",
   "dementia care specialists Greece",
   "post-hospital care for elderly",
 ];
@@ -204,7 +204,7 @@ export const siteConfig = {
   },
   contact: {
     email: "info@mazicare.gr",
-    phone: "+30 6955 117 140",
+    phone: "+30 6955 140 164",
   },
 };
 
@@ -212,7 +212,7 @@ export const siteConfig = {
 export const pageSEO = {
   home: {
     title: "MaziCare - Φροντίδα Ηλικιωμένων στην Ελλάδα | Elder Care Platform",
-    description: "Βρείτε τον ιδανικό φροντιστή για τους αγαπημένους σας. Επαληθευμένοι επαγγελματίες, 24/7 παρακολούθηση, ψηφιακό dashboard οικογένειας- Find verified caregivers for your loved ones in Greece.",
+    description: "Βρείτε τον ιδανικό φροντιστή για τους αγαπημένους σας. Επαληθευμένοι επαγγελματίες, παρακολούθηση, ψηφιακό dashboard οικογένειας- Find verified caregivers for your loved ones in Greece.",
     keywords: [
       "φροντίδα ηλικιωμένων",
       "φροντιστής ηλικιωμένων",

@@ -188,6 +188,7 @@
 
 html {
   font-size: var(--font-size);
+  /* REMOVE THIS: overflow-x: hidden; */
 }
 
 /* Prevent browser translation from interfering with interactive components */
@@ -207,9 +208,9 @@ body {
   overflow-wrap: break-word;
 }
 
-html {
+/* REMOVE THIS: html {
   overflow-x: hidden;
-}
+} */
 
 /* Better text wrapping for long words (Greek text) */
 p, span, h1, h2, h3, h4, h5, h6, label, a {
@@ -222,4 +223,3 @@ img, video, iframe {
   max-width: 100%;
   height: auto;
 }
-

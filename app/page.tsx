@@ -1,14 +1,13 @@
+// app/page.tsx
 import { Metadata } from "next";
 import { Header } from "@/components/sections/Header";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { CaregiverMatchDemo } from "@/components/sections/CaregiverMatchDemo";
-import { FamilyDashboardDemo } from "@/components/sections/FamilyDashboardDemo";
-import { WaitlistSection } from "@/components/sections/WaitlistSection";
 import { Footer } from "@/components/sections/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { pageSEO, siteConfig } from "@/lib/seo.config";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: pageSEO.home.title,
@@ -40,19 +39,17 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white">
       <Header />
-      <main className="overflow-x-hidden">
+      {/* Remove the fixed header spacer since Header likely handles this */}
+      <main className="pt-0">
         <HeroSection />
         <AboutSection />
         <ServicesSection />
-        <CaregiverMatchDemo />
-        <FamilyDashboardDemo />
-        <WaitlistSection />
       </main>
       <Footer />
+      <CookieConsent/>
       <Toaster />
     </div>
   );
 }
-

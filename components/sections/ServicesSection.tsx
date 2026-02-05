@@ -1,77 +1,88 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
-import { Users, Activity, Heart, DollarSign, MapPin } from "lucide-react";
+import NextImage from "next/image";
+import { useLanguage } from "@/lib/language-context";
 
 export function ServicesSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Τι Κάνουμε */}
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Τι Κάνουμε
+            {t.services.title}
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Συνδέουμε οικογένειες με επαληθευμένους φροντιστές, παρέχουμε ενημερώσεις φροντίδας σε πραγματικό χρόνο, 
-              ενισχύουμε την κοινωνική σύνδεση των ηλικιωμένων και βοηθάμε στη διαχείριση των επαναλαμβανόμενων εξόδων φροντίδας. 
-              Η MaziCare συνδυάζει τεχνολογία, ενσυναίσθηση και τοπική εμπειρία για να προσφέρει μια απρόσκοπτη εμπειρία 
-              φροντίδας — είτε βρίσκεστε στην Αθήνα είτε σε απομακρυσμένο χωριό.
+              {t.services.description}
             </p>
           </div>
         </div>
 
-        {/* Πώς Σας Υποστηρίζουμε */}
         <div className="mb-16">
           <h3 className="text-2xl lg:text-3xl font-bold text-center text-gray-900 mb-12">
-            Πώς σας Υποστηρίζουμε
+            {t.services.supportTitle}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-blue-500">
               <CardContent className="pt-0">
-                <Users className="h-10 w-10 text-blue-600 mb-4" />
-                <h4 className="text-lg font-semibold mb-3">Αξιόπιστοι Φροντιστές</h4>
+                <div className="mb-4">
+                  <NextImage src="/images/group.png" alt={t.services.reliableCaregivers} width={48} height={48} className="object-contain" />
+                </div>
+                <h4 className="text-lg font-semibold mb-3">{t.services.reliableCaregivers}</h4>
                 <p className="text-gray-600">
-                  Βρείτε αξιόπιστους φροντιστές στην περιοχή σας
+                  {t.services.reliableCaregiversDesc}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-green-500">
               <CardContent className="pt-0">
-                <Activity className="h-10 w-10 text-green-600 mb-4" />
-                <h4 className="text-lg font-semibold mb-3">Παρακολούθηση σε Πραγματικό Χρόνο</h4>
+                <div className="mb-4">
+                  <NextImage src="/images/monitor.png" alt={t.services.realTimeMonitoring} width={48} height={48} className="object-contain" />
+                </div>
+                <h4 className="text-lg font-semibold mb-3">{t.services.realTimeMonitoring}</h4>
                 <p className="text-gray-600">
-                  Παρακολουθήστε τη φροντίδα του αγαπημένου σας προσώπου σε πραγματικό χρόνο
+                  {t.services.realTimeMonitoringDesc}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-purple-500">
               <CardContent className="pt-0">
-                <Heart className="h-10 w-10 text-purple-600 mb-4" />
-                <h4 className="text-lg font-semibold mb-3">Κοινωνική Υποστήριξη</h4>
+                <div className="mb-4">
+                  <NextImage src="/images/social-services.png" alt={t.services.socialSupport} width={48} height={48} className="object-contain" />
+                </div>
+                <h4 className="text-lg font-semibold mb-3">{t.services.socialSupport}</h4>
                 <p className="text-gray-600">
-                  Κρατήστε τους ηλικιωμένους κοινωνικά ενεργούς και συναισθηματικά υποστηριγμένους
+                  {t.services.socialSupportDesc}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-orange-500">
               <CardContent className="pt-0">
-                <DollarSign className="h-10 w-10 text-orange-600 mb-4" />
-                <h4 className="text-lg font-semibold mb-3">Οικονομική Εξοικονόμηση</h4>
+                <div className="mb-4">
+                  <NextImage src="/images/save-money.png" alt={t.services.financialSavings} width={48} height={48} className="object-contain" />
+                </div>
+                <h4 className="text-lg font-semibold mb-3">{t.services.financialSavings}</h4>
                 <p className="text-gray-600">
-                  Εξοικονομήστε χρήματα σε επαναλαμβανόμενα προϊόντα φροντίδας
+                  {t.services.financialSavingsDesc}
                 </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 hover:shadow-lg transition-shadow border-l-4 border-teal-500">
               <CardContent className="pt-0">
-                <MapPin className="h-10 w-10 text-teal-600 mb-4" />
-                <h4 className="text-lg font-semibold mb-3">Ηρεμία από Μακριά</h4>
+                <div className="mb-4">
+                  <NextImage src="/images/location.png" alt={t.services.peaceOfMind} width={48} height={48} className="object-contain" />
+                </div>
+                <h4 className="text-lg font-semibold mb-3">{t.services.peaceOfMind}</h4>
                 <p className="text-gray-600">
-                  Αποκτήστε ηρεμία — ακόμα κι αν βρίσκεστε μακριά
+                  {t.services.peaceOfMindDesc}
                 </p>
               </CardContent>
             </Card>

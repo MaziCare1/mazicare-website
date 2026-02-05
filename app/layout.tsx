@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { SEOHead } from "@/components/SEOHead";
 import { siteConfig, allKeywords } from "@/lib/seo.config";
+import { LanguageProvider } from "@/lib/language-context";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -108,21 +109,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="el" dir="ltr">
+    <html lang="el" dir="ltr" suppressHydrationWarning className="notranslate" translate="no">
       <head>
         <SEOHead />
-        
+
         {/* Preconnect to external domains for better performance */}
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.clarity.ms" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        
+
         {/* Additional meta tags for better SEO */}
         <meta name="geo.region" content="GR" />
         <meta name="geo.placename" content="Athens" />
         <meta name="geo.position" content="37.9838;23.7275" />
         <meta name="ICBM" content="37.9838, 23.7275" />
-        
+
+        {/* Prevent Google Translate from auto-translating (breaks app's language switcher) */}
+        <meta name="google" content="notranslate" />
+
         {/* Language and locale tags */}
         <link rel="alternate" hrefLang="el" href={siteConfig.url} />
         <link rel="alternate" hrefLang="en" href={`${siteConfig.url}/en`} />
@@ -139,7 +143,7 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "ttgmb3w4ly");
           `}
         </Script>
-        
+
         {/* Google Analytics (Add your GA4 ID) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
@@ -153,8 +157,10 @@ export default function RootLayout({
             gtag('config', 'G-XXXXXXXXXX');
           `}
         </Script>
-        
-        {children}
+
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
