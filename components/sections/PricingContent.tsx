@@ -47,7 +47,7 @@ export function PricingContent() {
                             </div>
                         </div>
 
-                        <Link href="https://mazicare-webapp.vercel.app/signup?role=caregiver">
+                        <Link href="https://app.mazicare.gr/signup?role=caregiver">
                             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
                                 {t.pricing.ctaCaregiver}
                             </button>
@@ -83,7 +83,7 @@ export function PricingContent() {
                             </div>
                         </div>
 
-                        <Link href="https://mazicare-webapp.vercel.app/signup?role=family">
+                        <Link href="https://app.mazicare.gr/signup?role=family">
                             <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
                                 {t.pricing.ctaFamily}
                             </button>

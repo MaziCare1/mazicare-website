@@ -16,7 +16,7 @@ export function PricingHero() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => window.location.href = "https://mazicare-webapp.vercel.app/signup"}
+              onClick={() => window.location.href = "https://app.mazicare.gr/signup"}
               className="px-8 py-3 text-lg"
             >
               See plans and start

@@ -44,7 +44,7 @@ export function ForCaregiversHero() {
           </div>
 
           <Button
-            onClick={() => window.location.href = "https://mazicare-webapp.vercel.app/signup?role=caregiver"}
+            onClick={() => window.location.href = "https://app.mazicare.gr/signup?role=caregiver"}
             className="bg-green-600 hover:bg-green-700 px-8 py-3 text-lg"
           >
             Apply as Caregiver

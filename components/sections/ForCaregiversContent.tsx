@@ -52,7 +52,7 @@ function ForCaregiversHero() {
                     </div>
 
                     <a
-                        href="https://mazicare-webapp.vercel.app/signup?role=caregiver"
+                        href="https://app.mazicare.gr/signup?role=caregiver"
                         className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-foreground bg-primary hover:bg-primary/90 md:py-4 md:text-lg md:px-10"
                     >
                         {t.forCaregivers.hero.startButton}
@@ -432,7 +432,7 @@ function FinalCTA() {
                 </p>
                 <div className="flex justify-center">
                     <a
-                        href="https://mazicare-webapp.vercel.app/signup?role=caregiver"
+                        href="https://app.mazicare.gr/signup?role=caregiver"
                         className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-xl text-[#030213] bg-white hover:bg-gray-100 hover:scale-105 transition-all duration-200 shadow-xl"
                     >
                         {t.forCaregivers.cta.button}

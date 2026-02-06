@@ -10,7 +10,7 @@ export function FindCareHero() {
 
   const handleSearch = () => {
     // This would route to your app's onboarding flow
-    window.location.href = `https://mazicare-webapp.vercel.app/signup?role=family&careType=${careType}&location=${location}`;
+    window.location.href = `https://app.mazicare.gr/signup?role=family&careType=${careType}&location=${location}`;
   };
 
   return (

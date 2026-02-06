@@ -86,7 +86,7 @@ export function Header() {
             </div>
 
             <Link
-             href="https://mazicare-webapp.vercel.app/login" 
+             href="https://app.mazicare.gr/login" 
              className="ml-1.5 xl:ml-3 flex-shrink-0">
               <Button variant="default" className="font-medium text-sm px-2.5 xl:px-4 py-2 whitespace-nowrap">
                 {t.header.login}
@@ -97,7 +97,7 @@ export function Header() {
           {/* Mobile menu button - με σύνδεση για μικρές οθόνες */}
           <div className="lg:hidden flex items-center gap-2">
             <Link
-             href="https://mazicare-webapp.vercel.app/login" 
+             href="https://app.mazicare.gr/login" 
 
              className="hidden sm:block">
               <Button size="sm" variant="default" className="text-sm">
@@ -172,7 +172,7 @@ export function Header() {
 
               <div className="pt-4 border-t">
                 <Link
-                  href="https://mazicare-webapp.vercel.app/signup"
+                  href="https://app.mazicare.gr/signup"
                   onClick={() => setIsMenuOpen(false)}
                   className="block"
                 >

@@ -155,7 +155,7 @@ function FindCareHero() {
               </div>
             </div>
             <a
-              href="https://mazicare-webapp.vercel.app/signup?role=family"
+              href="https://app.mazicare.gr/signup?role=family"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all"
             >
               {t.findCare.hero.startButton}
@@ -772,7 +772,7 @@ function FindCareCTA() {
           </p>
           <div className="flex justify-center">
             <a
-              href="https://mazicare-webapp.vercel.app/signup?role=family"
+              href="https://app.mazicare.gr/signup?role=family"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 shadow-md hover:shadow-lg transition-all md:py-4 md:text-lg md:px-10"
             >
               {t.findCare.cta.button}
