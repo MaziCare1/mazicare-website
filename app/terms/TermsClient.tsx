@@ -25,105 +25,109 @@ export default function TermsClient() {
                     <Card className="shadow-lg border-0 bg-white/80 backdrop-blur-sm">
                         <CardContent className="p-6 sm:p-10 space-y-8">
 
-                            {/* Section 1 */}
+                            {/* Section 1 - Purpose and Binding Nature of Terms */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s1Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s1P1}</p>
                                     <p>{t.legal.terms.s1P2}</p>
+                                    <p>{t.legal.terms.s1P3}</p>
+                                    <p>{t.legal.terms.s1P4}</p>
                                 </div>
                             </section>
 
-                            {/* Section 2 */}
+                            {/* Section 2 - Role of MaziCare */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s2Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s2P1}</p>
                                     <p>{t.legal.terms.s2P2}</p>
                                     <p>{t.legal.terms.s2P3}</p>
+                                    <p>{t.legal.terms.s2P4}</p>
                                 </div>
                             </section>
 
-                            {/* Section 3 */}
+                            {/* Section 3 - User Registration */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s3Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s3P1}</p>
-                                    <ul className="list-disc pl-5 space-y-2">
-                                        {t.legal.terms.s3List.map((item, index) => (
-                                            <li key={index}>{item}</li>
-                                        ))}
-                                    </ul>
                                     <p>{t.legal.terms.s3P2}</p>
+                                    <p>{t.legal.terms.s3P3}</p>
+                                    <p>{t.legal.terms.s3P4}</p>
                                 </div>
                             </section>
 
-                            {/* Section 4 */}
+                            {/* Section 4 - Account Access */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s4Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s4P1}</p>
                                     <p>{t.legal.terms.s4P2}</p>
+                                    <p>{t.legal.terms.s4P3}</p>
+                                    <p>{t.legal.terms.s4P4}</p>
                                 </div>
                             </section>
 
-                            {/* Section 5 */}
+                            {/* Section 5 - Platform Functions */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s5Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s5P1}</p>
+                                    <ul className="list-disc pl-5 space-y-2">
+                                        {t.legal.terms.s5List.map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                    </ul>
                                     <p>{t.legal.terms.s5P2}</p>
                                 </div>
                             </section>
 
-                            {/* Section 6 */}
+                            {/* Section 6 - Employment/Service Contracts */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s6Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s6P1}</p>
-                                    <ul className="list-disc pl-5 space-y-2">
-                                        {t.legal.terms.s6List.map((item, index) => (
-                                            <li key={index}>{item}</li>
-                                        ))}
-                                    </ul>
                                     <p>{t.legal.terms.s6P2}</p>
+                                    <p>{t.legal.terms.s6P3}</p>
                                 </div>
                             </section>
 
-                            {/* Section 7 */}
+                            {/* Section 7 - Criminal Offenses & Liability */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s7Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s7P1}</p>
                                     <p>{t.legal.terms.s7P2}</p>
                                     <p>{t.legal.terms.s7P3}</p>
+                                    <p>{t.legal.terms.s7P4}</p>
                                 </div>
                             </section>
 
-                            {/* Section 8 */}
+                            {/* Section 8 - Subscriptions & Payments */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s8Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s8P1}</p>
                                     <p>{t.legal.terms.s8P2}</p>
+                                    <p>{t.legal.terms.s8P3}</p>
+                                    <p>{t.legal.terms.s8P4}</p>
+                                    <p>{t.legal.terms.s8P5}</p>
                                 </div>
                             </section>
 
-                            {/* Section 9 */}
+                            {/* Section 9 - User Content */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s9Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s9P1}</p>
-                                    <ul className="list-disc pl-5 space-y-2">
-                                        {t.legal.terms.s9List.map((item, index) => (
-                                            <li key={index}>{item}</li>
-                                        ))}
-                                    </ul>
                                     <p>{t.legal.terms.s9P2}</p>
+                                    <p>{t.legal.terms.s9P3}</p>
+                                    <p>{t.legal.terms.s9P4}</p>
                                 </div>
                             </section>
 
-                            {/* Section 10 */}
+                            {/* Section 10 - Intellectual Property */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s10Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
@@ -132,7 +136,7 @@ export default function TermsClient() {
                                 </div>
                             </section>
 
-                            {/* Section 11 */}
+                            {/* Section 11 - Cookies */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s11Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
@@ -141,12 +145,21 @@ export default function TermsClient() {
                                 </div>
                             </section>
 
-                            {/* Section 12 */}
+                            {/* Section 12 - Amendment of Terms */}
                             <section>
                                 <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s12Title}</h2>
                                 <div className="space-y-4 text-gray-700 leading-relaxed">
                                     <p>{t.legal.terms.s12P1}</p>
                                     <p>{t.legal.terms.s12P2}</p>
+                                </div>
+                            </section>
+
+                            {/* Section 13 - Applicable Law & Jurisdiction */}
+                            <section>
+                                <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.terms.s13Title}</h2>
+                                <div className="space-y-4 text-gray-700 leading-relaxed">
+                                    <p>{t.legal.terms.s13P1}</p>
+                                    <p>{t.legal.terms.s13P2}</p>
                                 </div>
                             </section>
 
