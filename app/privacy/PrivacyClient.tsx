@@ -103,6 +103,8 @@ export default function PrivacyClient() {
                                             <li key={index}>{item}</li>
                                         ))}
                                     </ul>
+                                    <p>{t.legal.privacy.s5P2}</p>
+                                    <p>{t.legal.privacy.s5P3}</p>
                                 </div>
                             </section>
 
@@ -147,7 +149,7 @@ export default function PrivacyClient() {
                                         ))}
                                     </ul>
                                     <p>{t.legal.privacy.s8P2}</p>
-                                    <p>{t.legal.privacy.s8P3}</p>
+                                    {t.legal.privacy.s8P3 && <p>{t.legal.privacy.s8P3}</p>}
                                 </div>
                             </section>
 
@@ -174,15 +176,17 @@ export default function PrivacyClient() {
                                 </div>
                             </section>
 
-                            {/* Section 11 */}
-                            <section>
-                                <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.privacy.s11Title}</h2>
-                                <div className="space-y-4 text-gray-700 leading-relaxed">
-                                    <p>{t.legal.privacy.s11P1}</p>
-                                    <p>{t.legal.privacy.s11P2}</p>
-                                    <p>{t.legal.privacy.s11P3}</p>
-                                </div>
-                            </section>
+                            {/* Section 11 - only render if content exists */}
+                            {t.legal.privacy.s11Title && (
+                                <section>
+                                    <h2 className="text-lg font-bold text-gray-900 mb-3">{t.legal.privacy.s11Title}</h2>
+                                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                                        {t.legal.privacy.s11P1 && <p>{t.legal.privacy.s11P1}</p>}
+                                        {t.legal.privacy.s11P2 && <p>{t.legal.privacy.s11P2}</p>}
+                                        {t.legal.privacy.s11P3 && <p>{t.legal.privacy.s11P3}</p>}
+                                    </div>
+                                </section>
+                            )}
 
                             {/* Section 12 */}
                             <section>
