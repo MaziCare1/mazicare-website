@@ -445,7 +445,10 @@ export const translations = {
                 messagePlaceholder: "Γράψτε το μήνυμά σας εδώ...",
                 privacyConsent: "Συμφωνώ με την Πολιτική Απορρήτου και τους Όρους Χρήσης",
                 submit: "Αποστολή Μηνύματος",
-                required: "*"
+                required: "*",
+                successMessage: "Το μήνυμα στάλθηκε με επιτυχία!",
+                errorMessage: "Αποτυχία αποστολής μηνύματος. Δοκιμάστε ξανά.",
+                sending: "αποστολή"
             },
             info: {
                 title: "Πληροφορίες Επικοινωνίας",
@@ -1081,8 +1084,11 @@ export const translations = {
                 messagePlaceholder: "Write your message here...",
                 privacyConsent: "I agree to the Privacy Policy and Terms of Use",
                 submit: "Send Message",
-                required: "*"
-            },
+                required: "*",
+                successMessage: "Message sent successfully!",
+                errorMessage: "Failed to send message. Please try again.",
+                sending : "sending"
+                        },
             info: {
                 title: "Contact Information",
                 address: "Address",
